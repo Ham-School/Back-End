@@ -32,6 +32,7 @@ urlpatterns = [
     path('abc.html', views.abck),
     path('losanimales.html', views.animk),
     path('colores.html', views.coloresk),
+<<<<<<< HEAD
     path('final.html', views.finalK),
     path('pplprm.html', views.primaria),
     path('article.html/pplprm.html', views.primaria),
@@ -42,6 +43,9 @@ urlpatterns = [
     path('fgeoprim.html', views.Figuras),
     path('partescuerpoprim.html', views.cuerpo),
     path('pronomprim.html', views.Pronombres),
+=======
+   
+>>>>>>> a270ec05881fec014219ca3a086c6790dd4738a7
 ]
 
 urlpatterns += staticfiles_urlpatterns()
