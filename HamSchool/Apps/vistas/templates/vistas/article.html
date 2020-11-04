@@ -1,0 +1,149 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/assets/css/style.css' %}">
+
+<style>
+
+    body{  
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+    background: linear-gradient(to right, #ec2F4B, #009FFF);
+    }    
+    /* Para un comportamiento responsive */
+    .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    }
+  </style> 
+
+    <title>Sobre Nosotros</title>
+</head>
+
+<body class="article-pg">
+    <header class="mt-0 pt-0">
+        <div class="bg-cover clearfix pt-3">
+            <h2 class="logo">Ham-School</h2>
+            <nav class="nav nav-fill mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://facebook.com/fh5co" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/fh5co" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+            </nav>
+
+
+            
+            <ul class="nav nav-fill mx-auto breadc pb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="container-fluid ar-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 pr-5">
+                    <div class="card ar-img-over">
+                        <img class="card-img" src="{% static 'main/assets/images/article-banner.png' %}" alt="">
+                        <div class="card-img-overlay">
+                            <a href="#" class="d-flex align-items-center justify-content-center"><img
+                                    src="{% static 'main/assets/images/full-screen.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    
+                    <div class="media my-5">
+                        <div class="bbg media-body">
+                            <h2>About Ham-School</h2>
+                        </div>
+                    </div>
+
+                    <div class="media my-5">
+                        <div class="bbg media-body">
+                            <h5 class="mb-0">This project consists of teaching interactive English courses to primary and secondary school children through a digital medium, with the purpose of helping their learning and orienting them to better learning.</h5>
+
+                        </div>
+                    </div>
+
+                    <p>
+                        <h4>- Objective</h4>  
+
+                        - Get to position ourselves as a website that is used in schools to improve student learning in a period of 5 to 6 years.
+                        
+                        <h4>- Public objective</h4> 
+                        
+                        - The creation of HAM-SCHOOL is a website that is aimed at preschool-secondary children, with the aim that children learn or reinforce the English language since not all schools teach English.
+
+                        <h4>- Arquitecture Model</h4> 
+
+                        - Manipulation of application data
+                        Template: decide how the data will be displayed in the browser
+                        View: decide which data the templates will show
+
+                        <h4>- Design Paterns</h4>
+
+                        <h5>Singleton Pattern</h5>
+
+                        <p>The singleton pattern is one of the simplest design patterns: it involves only one class which is responsible to instantiate itself, to make sure it creates not more than one instance; in the same time it provides a global point of access to that instance. In this case the same instance can be used from everywhere, being impossible to invoke directly the constructor each time.</p>
+
+                        <p>Ensure that only one instance of a class is created.</p>
+    
+                        <p>Provide a global point of access to the object.</p>
+
+                        <h4>- Requirements functional</h4>
+
+                        Ham-School is a web app that will provide knowledge for learning at the level of each user.
+                        The web app will have periodical updates to keep the website attractive to users.
+                        The web app will save user data to have better monitoring of each user.
+
+                        <h4>- Requirements not functional</h4>
+
+                        <p>The web app should have an user-friendly interface.</p>
+                        <p>The web app should be constant maintenance.</p>
+                        A database will save information entered in the app and the information in general. </p>
+
+                    <p> Eodem modo typi, qui nunc nobis videntur parum Nam liber tempor cum soluta nobis eleifend option
+                        congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent
+                        claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes
+                        demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
+                        dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica,
+                        quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta
+                        decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                        in futurum.
+                    </p>
+
+                    <div class="media my-5">
+                        <div class="bbg media-body">
+                            <h1 class="mb-0">Español</h1>
+                        </div>
+                    </div>
+                 
+    <footer class="container-fluid pt-5">
+        <div class="copy-right mt-4" align="align-items-center">
+            <p class="text-center">&copy; 2020 <a href="#" class="text-white">Ham-School</a>. All Rights Reserved.<a href="https://freehtml5.co/shahala" target="_blank" class="text-white"></a>.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'main/assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'main/assets/js/jquery-1.12.0.min.js' %}"></script>
+    <script src="{% static 'main/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'main/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'main/assets/js/article.js' %}"></script>
+
+</body>
+</html>
