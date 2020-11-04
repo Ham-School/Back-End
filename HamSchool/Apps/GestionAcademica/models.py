@@ -16,10 +16,6 @@ class alumno(models.Model):
     def __str__(self):
         return self.Nombrecompleto()
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a270ec05881fec014219ca3a086c6790dd4738a7
 class curso(models.Model):
     Nombre = models.CharField(max_length=35)
     estado = models.BooleanField(default=True)
@@ -28,7 +24,6 @@ class curso(models.Model):
         cadena = "{0}"
         return cadena.format(self.Nombre)
 
-<<<<<<< HEAD
 
 class profesor(models.Model):
     apellidoP = models.CharField(max_length=35)
@@ -45,8 +40,6 @@ class profesor(models.Model):
         return self.NombrecompletopProf()
         
 
-=======
->>>>>>> a270ec05881fec014219ca3a086c6790dd4738a7
 class Grado(models.Model):
     alumno = models.ForeignKey(alumno, null=False, blank=False, on_delete=models.CASCADE)
     curso = models.ForeignKey(curso, null=False, blank=False, on_delete=models.CASCADE)

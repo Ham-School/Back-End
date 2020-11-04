@@ -23,7 +23,6 @@ def animk (request):
     return render(request, "vistas/cursos/losanimales.html")
 
 def coloresk (request):
-<<<<<<< HEAD
     return render(request, "vistas/cursos/colores.html")
 
 def finalK (request):
@@ -49,6 +48,3 @@ def cuerpo (request):
 
 def Pronombres (request):
     return render(request, "vistas/cursos/pronomprim.html")  
-=======
-    return render(request, "vistas/cursos/colores.html")
->>>>>>> a270ec05881fec014219ca3a086c6790dd4738a7
