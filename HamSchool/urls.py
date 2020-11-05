@@ -42,6 +42,7 @@ urlpatterns = [
     path('fgeoprim.html', views.Figuras),
     path('partescuerpoprim.html', views.cuerpo),
     path('pronomprim.html', views.Pronombres),
+    path('finalprim.html', views.finalp),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

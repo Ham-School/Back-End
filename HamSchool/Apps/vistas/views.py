@@ -48,3 +48,6 @@ def cuerpo (request):
 
 def Pronombres (request):
     return render(request, "vistas/cursos/pronomprim.html")  
+
+def finalp (request):
+    return render(request, "vistas/cursos/finalprim.html")
