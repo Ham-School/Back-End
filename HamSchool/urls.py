@@ -43,6 +43,7 @@ urlpatterns = [
     path('partescuerpoprim.html', views.cuerpo),
     path('pronomprim.html', views.Pronombres),
     path('finalprim.html', views.finalp),
+    path('pplsec.html', views.secundaria),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

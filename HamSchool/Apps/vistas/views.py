@@ -28,6 +28,8 @@ def coloresk (request):
 def finalK (request):
     return render(request, "vistas/cursos/final.html")
 
+
+
 def primaria (request):
     return render(request, "vistas/cursos/pplprm.html")
 
@@ -51,3 +53,7 @@ def Pronombres (request):
 
 def finalp (request):
     return render(request, "vistas/cursos/finalprim.html")
+
+
+def secundaria (request):
+    return render(request, "vistas/cursos/pplsec.html")

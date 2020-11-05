@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,8 @@
 
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'cursos/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cursos/assets/css/style.css' %}">
      <style>
 
     body{  
@@ -33,7 +34,7 @@
           <!-- centrar texto -->
          <center>
             
-              <h5> <a href="#" class="p-4 mb-2 bg-warning text-white" size="7"> Inicio Ham School</a></h5>
+              <h5> <a href="index.html" class="p-4 mb-2 bg-warning text-white" size="7"> Inicio Ham School</a></h5>
            
           </center>  
   </div>
@@ -64,7 +65,7 @@
     <div class="card">
       <div class="card-body">
         <H5>The alphabet/El alfabeto</H5>
-        <div class="col px-md-5">  <a href="abcsec.html"> <img src="assets/image/abcc.png" width="200"> </a> 
+        <div class="col px-md-5">  <a href="abcsec.html"> <img src="{% static 'cursos/assets/image/abcc.png' %}" width="200"> </a> 
             
         
       </div>
@@ -75,7 +76,7 @@
     <div class="card">
       <div class="card-body">
         <H5>Past and present tense/Tiempo pasado y presente</H5>
-        <div class="col px-md-5">  <a href="tiempossec.html"> <img src="assets/image/PREPA.png" width="200"> </a> 
+        <div class="col px-md-5">  <a href="tiempossec.html"> <img src="{% static 'cursos/assets/image/PREPA.png' %}" width="200"> </a> 
             
         
       </div>
@@ -86,7 +87,7 @@
     <div class="card">
       <div class="card-body">
         <H5>Verb to be/Verbo To be</H5>
-        <div class="col px-md-5">  <a href="tobe.html"> <img src="assets/image/tobb.png" width="200"> </a> 
+        <div class="col px-md-5">  <a href="tobe.html"> <img src="{% static 'cursos/assets/image/tobb.png' %}" width="200"> </a> 
             
         
       </div>
@@ -97,7 +98,7 @@
     <div class="card">
       <div class="card-body">
         <H5>Numbers/Numeros</H5>
-        <div class="col px-md-5">  <a href="numsec.html"> <img src="assets/image/numsec.png" width="200"> </a> 
+        <div class="col px-md-5">  <a href="numsec.html"> <img src="{% static 'cursos/assets/image/numsec.png' %}" width="200"> </a> 
             
         
       </div>
@@ -108,7 +109,7 @@
     <div class="card">
       <div class="card-body">
         <H5>The family/La familia</H5>
-        <div class="col px-md-5">  <a href="famsec.html"> <img src="assets/image/famsec.png" width="200"> </a> 
+        <div class="col px-md-5">  <a href="famsec.html"> <img src="{% static 'cursos/assets/image/famsec.png' %}" width="200"> </a> 
             
         
       </div>
@@ -119,7 +120,7 @@
     <div class="card">
       <div class="card-body">
         <H5>Body parts/Partes del cuerpo</H5>
-        <div class="col px-md-5">  <a href="partecusec.html"> <img src="assets/image/hums.png" width="200"> </a> 
+        <div class="col px-md-5">  <a href="partecusec.html"> <img src="{% static 'cursos/assets/image/hums.png' %}" width="200"> </a> 
             
         
       </div>
