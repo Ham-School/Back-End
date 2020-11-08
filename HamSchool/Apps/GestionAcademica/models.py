@@ -2,12 +2,14 @@ from django.db import models
 
 # Create your models here.
 
-class alumno(models.Model):
+class Usuario (models.Model):
     apellidoP = models.CharField(max_length=35)
     apellidoM = models.CharField(max_length=35)
     nombre = models.CharField(max_length=35)
-    sexos = (('F', 'Femenino'), ('M', 'Masculino'))
-    sexo = models.CharField(max_length=1, choices=sexos, default='M')
+    edad = models.PositiveIntegerField()
+    tipo = (('Maestro', 'Maestro'), ('Alumno', 'Alumno'))
+    Tipo = models.CharField(max_length=7, choices=tipo, default='Alumno')
+    fecha = models.DateField()
 
     def Nombrecompleto(self):
         cadena = "{0} {1}, {2}"
@@ -16,36 +18,14 @@ class alumno(models.Model):
     def __str__(self):
         return self.Nombrecompleto()
 
-class curso(models.Model):
-    Nombre = models.CharField(max_length=35)
-    estado = models.BooleanField(default=True)
+class Curso (models.Model):
+    Usuario = models.ForeignKey(Usuario, null=False, blank=False, on_delete=models.CASCADE)
+    clase = models.CharField(max_length=50)
+    Grado = models.CharField(max_length=35)
 
     def __str__(self):
-        cadena = "{0}"
-        return cadena.format(self.Nombre)
+        cadena = "{0} {1} {2}"
+        return cadena.format(self.Usuario, self.Grado, self.clase)
 
-
-class profesor(models.Model):
-    apellidoP = models.CharField(max_length=35)
-    apellidoM = models.CharField(max_length=35)
-    nombre = models.CharField(max_length=35)
-    sexos = (('F', 'Femenino'), ('M', 'Masculino'))
-    sexo = models.CharField(max_length=1, choices=sexos, default='M')
-
-    def NombrecompletopProf(self):
-        cadena = "{0} {1}, {2}"
-        return cadena.format(self.apellidoP, self.apellidoM, self.nombre)
-
-    def __str__(self):
-        return self.NombrecompletopProf()
-        
-
-class Grado(models.Model):
-    alumno = models.ForeignKey(alumno, null=False, blank=False, on_delete=models.CASCADE)
-    curso = models.ForeignKey(curso, null=False, blank=False, on_delete=models.CASCADE)
-
-    def __str__(self):
-        cadena = "{0} {1}"
-        return cadena.format(self.alumno, self.curso)
 
         
