@@ -15,14 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from HamSchool.Apps.vistas import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+from HamSchool.Apps.vistas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('login/', views.login),
+    
     path('article.html/', views.article),
     path('article.html/index.html', views.index),
     path('article.html/article.html', views.article),
@@ -44,6 +42,9 @@ urlpatterns = [
     path('pronomprim.html', views.Pronombres),
     path('finalprim.html', views.finalp),
     path('pplsec.html', views.secundaria),
+
+    path('logout/', views.logout_requesr, name="logout"),
+    path('', views.login_request, name="login"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

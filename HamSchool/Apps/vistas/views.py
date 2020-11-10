@@ -1,11 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
+from django.contrib import messages
 
 # Create your views here.
+
+def register (request):
+    return render(request, "vistas/login/register.html")    
+
 def index (request):
     return render(request, "vistas/index.html")
-
-def login (request):
-    return render(request, "vistas/login/index.html")
 
 def article (request):
     return render(request, "vistas/article.html")
@@ -57,3 +61,26 @@ def finalp (request):
 
 def secundaria (request):
     return render(request, "vistas/cursos/pplsec.html")
+
+
+def logout_requesr(request):
+    logout(request)
+    messages.info(request, "salida exitosa")
+    return redirect("vistas/index.html")
+
+def login_request(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            usuario = form.cleaned_data.get('username')
+            contaseña = form.cleaned_data.get('password')
+            user = authenticate(username=usuario, password=contaseña)
+
+            if user is not None:
+                login(request, user)
+                return redirect("index.html")
+            else:
+                messages.error(request, "Usuario o Contraseña invalidad")
+                
+    form = AuthenticationForm()
+    return render(request, "vistas/login/login.html")

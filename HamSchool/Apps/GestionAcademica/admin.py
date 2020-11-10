@@ -5,3 +5,4 @@ from HamSchool.Apps.GestionAcademica.models import *
 
 admin.site.register(Usuario)
 admin.site.register(Curso)
+
