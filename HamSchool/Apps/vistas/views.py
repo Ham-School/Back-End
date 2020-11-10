@@ -14,6 +14,8 @@ def index (request):
 def article (request):
     return render(request, "vistas/article.html")
 
+
+
 def kinder (request):
     return render(request, "vistas/cursos/pplkinder.html")
 
@@ -57,6 +59,7 @@ def Pronombres (request):
 
 def finalp (request):
     return render(request, "vistas/cursos/finalprim.html")
+
 
 
 def secundaria (request):

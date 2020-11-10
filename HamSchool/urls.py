@@ -45,6 +45,7 @@ urlpatterns = [
 
     path('logout/', views.logout_requesr, name="logout"),
     path('', views.login_request, name="login"),
+    path('login.html', views.login_request, name="login"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
