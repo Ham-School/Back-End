@@ -20,10 +20,6 @@ from HamSchool.Apps.vistas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
-    path('article.html/', views.article),
-    path('article.html/index.html', views.index),
-    path('article.html/article.html', views.article),
     path('pplkinder.html', views.kinder),
     path('index.html', views.index),
     path('numeros.html', views.numk),
@@ -32,8 +28,6 @@ urlpatterns = [
     path('colores.html', views.coloresk),
     path('final.html', views.finalK),
     path('pplprm.html', views.primaria),
-    path('article.html/pplprm.html', views.primaria),
-    path('article.html/pplkinder.html', views.kinder),
     path('alfabetoprim.html', views.Alfabeto),
     path('numerosprim.html', views.Números),
     path('coloresprim.html', views.Colores),
@@ -45,7 +39,10 @@ urlpatterns = [
 
     path('logout/', views.logout_requesr, name="logout"),
     path('', views.login_request, name="login"),
-    path('login.html', views.login_request, name="login"),
+    path('login', views.login_request, name="login"),
+    path('register', views.register_request, name="register")
+
+    
 ]
 
 urlpatterns += staticfiles_urlpatterns()

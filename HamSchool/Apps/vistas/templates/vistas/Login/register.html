@@ -1,33 +1,33 @@
-{% load static%}
+{% load static %}
 <html>
     <head>
         <title>Register</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'login/css/csslr.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body background="{% static 'login/img/fondo.jpg' %}">
       <div class="menu">
-      <div id="fondom">
+        <div id="fondom">
 
-        <a class="Iniciar" href="">Iniciar</a>
-        <a class="Registrar" href="#">Registrar</a>
+          <a class="Iniciar" href="login">Iniciar</a>
 
-      <div class="cuadro">
-        <img src="{% static 'login//img/ham.png' %}" id="logo" alt="Ham-School" width="100" height="100"/>
+          <div class="cuadro">
+            <img src="{% static 'login/img/hamschool3.png' %}" id="logo" alt="Ham-School" width="250" height="100"/>
+          </div>
+
+          <form>
+            <input type="text" id="name" class="name" name="name" placeholder="Nombre">
+            <input type="text" id="ape" class="ape" name="ape" placeholder="Apellido">
+            <input type="text" id="correo" class="correo" name="correo" placeholder="Correo">
+            <input type="Password" id="pass" class="pass" name="pass" placeholder="Contraseña">
+            <input type="submit" class="registar" value="Registrar">
+          </form>
+          
+        </div>
       </div>
-
-    <form>
-      <input type="text" id="name" class="name" name="name" placeholder="Nombre">
-      <input type="text" id="ape" class="ape" name="ape" placeholder="Apellido">
-      <input type="text" id="correo" class="correo" name="correo" placeholder="Correo">
-      <input type="Password" id="pass" class="pass" name="pass" placeholder="Contraseña">
-      <input type="submit" class="registar" value="Registrar">
-    </form>
-
-  </div>
-</div>
-
   </body>
 </html>

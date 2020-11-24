@@ -5,14 +5,12 @@ from django.contrib import messages
 
 # Create your views here.
 
-def register (request):
+def register_request (request):
     return render(request, "vistas/login/register.html")    
 
 def index (request):
     return render(request, "vistas/index.html")
 
-def article (request):
-    return render(request, "vistas/article.html")
 
 
 
@@ -84,6 +82,7 @@ def login_request(request):
                 return redirect("index.html")
             else:
                 messages.error(request, "Usuario o Contraseña invalidad")
+                
                 
     form = AuthenticationForm()
     return render(request, "vistas/login/login.html")
