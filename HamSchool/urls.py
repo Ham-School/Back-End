@@ -40,9 +40,9 @@ urlpatterns = [
     path('logout/', views.logout_requesr, name="logout"),
     path('', views.login_request, name="login"),
     path('login', views.login_request, name="login"),
-    path('register', views.register_request, name="register")
+    path('register', views.register_request, name="register"),
+    path('olvp', views.olvp_request, name="olvp")
 
-    
 ]
 
 urlpatterns += staticfiles_urlpatterns()

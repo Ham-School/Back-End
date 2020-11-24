@@ -1,22 +1,23 @@
+{% load static %}
 <html>
     <head>
         <title>Olvidaste tu contraseña!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/csslr.css">
+        <link rel="stylesheet" href="{% static 'login/css/csslr.css' %}">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
     </head>
 
-    <body background="../img/fondo.jpg">
+    <body background="{% static 'login/img/fondo.jpg' %}">
       <div class="menu">
         <div id="fondom">
 
-            <a class="Iniciar" href="../form/login.html">Iniciar</a>
-          <a class="Registrar" href="../form/register1.html">Registrar</a>
+            <a class="Iniciar" href="login">Iniciar</a>
+          <a class="Registrar" href="register">Registrar</a>
 
           <div class="cuadro">
-            <img src="../img/hamschool3.png" id="logo" alt="Ham-School" width="250" height="100"/>
+            <img src="{% static 'login/img/hamschool3.png' %}" id="logo" alt="Ham-School" width="250" height="100"/>
           </div>
 
           <form>

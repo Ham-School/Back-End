@@ -5,8 +5,7 @@ from django.contrib import messages
 
 # Create your views here.
 
-def register_request (request):
-    return render(request, "vistas/login/register.html")    
+   
 
 def index (request):
     return render(request, "vistas/index.html")
@@ -86,3 +85,9 @@ def login_request(request):
                 
     form = AuthenticationForm()
     return render(request, "vistas/login/login.html")
+
+def register_request (request):
+    return render(request, "vistas/login/register.html") 
+
+def olvp_request (request):
+    return render(request, "vistas/login/olvp.html")
