@@ -1,67 +1,23 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
+from .forms import UserRegisterForm
+
 from django.contrib import messages
 
 # Create your views here.
-
-   
-
-def index (request):
-    return render(request, "vistas/index.html")
-
-
-
-
-def kinder (request):
-    return render(request, "vistas/cursos/pplkinder.html")
-
-def numk (request):
-    return render(request, "vistas/cursos/numeros.html")
-
-def abck (request):
-    return render(request, "vistas/cursos/abc.html")  
-
-def animk (request):
-    return render(request, "vistas/cursos/losanimales.html")
-
-def coloresk (request):
-    return render(request, "vistas/cursos/colores.html")
-
-def finalK (request):
-    return render(request, "vistas/cursos/final.html")
-
-
-
-def primaria (request):
-    return render(request, "vistas/cursos/pplprm.html")
-
-def Alfabeto (request):
-    return render(request, "vistas/cursos/alfabetoprim.html")
-
-def Números (request):
-    return render(request, "vistas/cursos/numerosprim.html")
-
-def Colores (request):
-    return render(request, "vistas/cursos/coloresprim.html")
-
-def Figuras (request):
-    return render(request, "vistas/cursos/fgeoprim.html")    
-
-def cuerpo (request):
-    return render(request, "vistas/cursos/partescuerpoprim.html")
-
-def Pronombres (request):
-    return render(request, "vistas/cursos/pronomprim.html")  
-
-def finalp (request):
-    return render(request, "vistas/cursos/finalprim.html")
-
-
-
-def secundaria (request):
-    return render(request, "vistas/cursos/pplsec.html")
-
+def register_request (request):
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data('username')
+            messages.success(request, f'Usuario {username} creado')
+            return redirect(request, "vistas/index.html")
+        else:
+            form = UserRegisterForm()
+        contex = { 'form' : form}
+    return render(request, "vistas/login/register.html") 
 
 def logout_requesr(request):
     logout(request)
@@ -78,16 +34,74 @@ def login_request(request):
 
             if user is not None:
                 login(request, user)
-                return redirect("index.html")
+                return redirect("index")
             else:
-                messages.error(request, "Usuario o Contraseña invalidad")
-                
-                
+                messages.error(request, "Usuario o Contraseña invalidad")           
+            
     form = AuthenticationForm()
     return render(request, "vistas/login/login.html")
 
-def register_request (request):
-    return render(request, "vistas/login/register.html") 
 
 def olvp_request (request):
     return render(request, "vistas/login/olvp.html")
+
+
+
+def index_request (request):
+    return render (request, "vistas/index.html")
+def Curso_curos (request):
+    return render (request, "vistas/vistafabi1.html")
+
+
+
+def curso_kinder (request):
+    return render (request, "vistas/cursos/Kinderindex.html")
+def curso_kinder_num (request):
+    return render (request, "vistas/cursos/KinderNUm.html")
+def curso_kinder_abc (request):
+    return render (request, "vistas/cursos/KinderAbc.html")
+def curso_kinder_anim (request):
+    return render (request, "vistas/cursos/KinderAnim.html")
+def curso_kinder_Col (request):
+    return render (request, "vistas/cursos/KinderCol.html")
+def curso_kinder_Final (request):
+    return render (request, "vistas/cursos/KinderFinal.html")
+
+def curso_Primaria (request):
+    return render (request, "vistas/cursos/Primindex.html")
+def curso_Primaria_Abc (request):
+    return render (request, "vistas/cursos/Primabc.html")
+def curso_Primaria_Num (request):
+    return render (request, "vistas/cursos/Primnum.html")
+def curso_Primaria_col (request):
+    return render (request, "vistas/cursos/Primcol.html")
+def curso_Primaria_geo (request):
+    return render (request, "vistas/cursos/Primgeo.html")
+def curso_Primaria_PC (request):
+    return render (request, "vistas/cursos/PrimPC.html")
+def curso_Primaria_pron (request):
+    return render (request, "vistas/cursos/Primpron.html")
+def curso_Primaria_Final (request):
+    return render (request, "vistas/cursos/PrimFinal.html")
+
+def cursos_sec (request):
+    return render (request, "vistas/cursos/Secindex.html")
+def cursos_sec_pc (request):
+    return render (request, "vistas/cursos/SecPC.html")
+def cursos_sec_Tobe (request):
+    return render (request, "vistas/cursos/SecToBe.html")
+def cursos_sec_num (request):
+    return render (request, "vistas/cursos/SecNum.html")
+def cursos_sec_fam (request):
+    return render (request, "vistas/cursos/SecFam.html")
+def cursos_sec_acb (request):
+    return render (request, "vistas/cursos/Secabc.html")
+def cursos_sec_tiempo ( request):
+    return render (request, "vistas/cursos/SecTiempo.html")
+def cursos_sec_final (request):
+    return render (request, "vistas/cursos/SecFinal.html")
+
+def games_memorama(request):
+    return render (request, "vistas/memorama.html")
+def games_ahorcado (request):
+    return render (request, "vistas/cursos/ahorcado.html")

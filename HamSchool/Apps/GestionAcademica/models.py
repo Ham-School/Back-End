@@ -22,6 +22,7 @@ class Usuario (models.Model):
     tipo = (('Maestro', 'Maestro'), ('Alumno', 'Alumno'))
     Tipo = models.CharField(max_length=7, choices=tipo, default='Alumno')
     fecha = models.DateField(auto_now_add=True)
+    mail = models.CharField(max_length=50)
 
 
     def Nombrecompleto(self):

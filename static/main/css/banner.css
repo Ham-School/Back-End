@@ -80,6 +80,14 @@
 	animation-delay: 1s;
 }
 
+.ham_banner_link4{
+	opacity: 0;
+	animation: keyframes_arriba 1s;
+	-webkit-animation: keyframes_arriba 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+}
+
 .ham_cont_banner_sec_3{
 	height: 135vh;
 	background-attachment: fixed;
